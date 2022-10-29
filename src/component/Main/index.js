@@ -3,13 +3,17 @@ import "./main.style.scss";
 // img
 import ProfileImg from "../../assets/img/profile.jpg";
 import ShareBtn from "../../assets/img/share.svg";
+import GithubLogo from "../../assets/img/github-icon-1.svg";
+import SlackLogo from "../../assets/img/slack-new-logo.svg";
 
 const Main = () => {
 	return (
 		<div className="main-container">
 			<div>
 				<img id="profile__img" alt="profile_img" src={ProfileImg} />
-				<img id="share__btn" alt="share" src={ShareBtn} />
+				<a href="/">
+					<img id="share__btn" alt="share" src={ShareBtn} />
+				</a>
 				<h3>Gbolahan Oladeji</h3>
 			</div>
 			<nav>
@@ -51,6 +55,15 @@ const Main = () => {
 						<span id="slack">0g</span>
 					</li>
 				</ul>
+
+				<div className="social">
+					<a href="/">
+						<img id="slack__btn" alt="slack" src={SlackLogo} />
+					</a>
+					<a href="/">
+						<img id="github__btn" alt="github" src={GithubLogo} />
+					</a>
+				</div>
 			</nav>
 		</div>
 	);
