@@ -1,0 +1,40 @@
+.main-container {
+	margin: 40px;
+	position: relative;
+	#profile__img {
+		width: 5em;
+		height: 5em;
+		border-radius: 130px;
+	}
+	#share__btn {
+		position: absolute;
+		top: 0;
+		right: 22%;
+	}
+	h3 {
+		margin-top: 15px;
+		margin-bottom: 50px;
+		font-size: 25px;
+		letter-spacing: 1px;
+	}
+	.link {
+		list-style-type: none;
+		width: 70%;
+		margin: auto;
+		li {
+			background-color: #eaecf0;
+			height: 30px;
+			border-radius: 5px;
+			margin: 15px 0;
+			padding: 10px;
+			a {
+				text-decoration: none;
+				color: #000;
+				font-weight: 500;
+			}
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+}

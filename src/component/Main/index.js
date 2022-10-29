@@ -1,16 +1,23 @@
 // style
+import "./main.style.scss";
+// img
+import ProfileImg from "../../assets/img/profile.jpg";
+import ShareBtn from "../../assets/img/share.svg";
 
 const Main = () => {
 	return (
 		<div className="main-container">
 			<div>
-				<img id="profile__img" alt="profile_img" />
+				<img id="profile__img" alt="profile_img" src={ProfileImg} />
+				<img id="share__btn" alt="share" src={ShareBtn} />
 				<h3>Gbolahan Oladeji</h3>
 			</div>
 			<nav>
 				<ul className="link">
 					<li>
-						<a>Twitter Link</a>
+						<a href="https://twitter.com/Mo_Gbolahan">
+							Twitter Link
+						</a>
 					</li>
 					<li>
 						<a href="https://training.zuri.team/" id="btn__zuri">
