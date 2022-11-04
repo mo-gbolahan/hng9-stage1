@@ -8,7 +8,7 @@ import SlackLogo from "../../assets/img/slack-new-logo.svg";
 
 const Main = () => {
 	return (
-		<div className="main-container">
+		<div className="main-container container">
 			<div>
 				<img id="profile__img" alt="profile_img" src={ProfileImg} />
 				<a href="/">

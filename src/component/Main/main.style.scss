@@ -1,9 +1,10 @@
 .main-container {
 	padding: 10px;
 	padding-bottom: 0;
-	margin-bottom: auto;
 
 	position: relative;
+
+	max-width: initial;
 	#profile__img {
 		width: 5em;
 		height: 5em;
