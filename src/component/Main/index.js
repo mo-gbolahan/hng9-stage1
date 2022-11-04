@@ -52,6 +52,11 @@ const Main = () => {
 						</a>
 					</li>
 					<li>
+						<a href="/contact" id="contact">
+							Contact Me
+						</a>
+					</li>
+					<li>
 						<span id="slack">0g</span>
 					</li>
 				</ul>

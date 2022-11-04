@@ -1,6 +1,8 @@
 .main-container {
 	padding: 10px;
 	padding-bottom: 0;
+	margin-bottom: auto;
+
 	position: relative;
 	#profile__img {
 		width: 5em;
@@ -14,7 +16,7 @@
 	}
 	h3 {
 		margin-top: 15px;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		font-size: 25px;
 		letter-spacing: 1px;
 	}
@@ -23,15 +25,24 @@
 		width: 70%;
 		margin: auto;
 		li {
-			background-color: #eaecf0;
-			height: 30px;
-			border-radius: 5px;
+			// background-color: #eaecf0;
+
+			background: linear-gradient(to left, #eaecf0 50%, #a8aaad 50%) right;
+			background-size: 200%;
+			transition: 0.5s ease-out;
+			border-radius: 10px;
 			margin: 15px 0;
-			padding: 10px;
+			&:hover {
+				cursor: pointer;
+				// background-color: #a8aaad;
+				background-position: left;
+			}
 			a {
+				padding: 10px;
 				text-decoration: none;
 				color: #000;
 				font-weight: 500;
+				display: block;
 			}
 			&:last-child {
 				display: none;
@@ -39,7 +50,7 @@
 		}
 	}
 	div.social {
-		margin: 15px 25px;
+		margin: 7px 25px;
 		img {
 			width: 15px;
 			margin-left: 25px;
