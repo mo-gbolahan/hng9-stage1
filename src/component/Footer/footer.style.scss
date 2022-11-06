@@ -1,19 +1,18 @@
-// .floating-footer {
-// 	// position: absolute;
-// 	// bottom: 0;
-// 	// width: 75%;
-// }
+@import "../../Styles/variables";
+
 .footer-container {
 	// position: absolute;
 	// bottom: 0;
 	width: 75%;
 
 	border-top: 2px solid #eaecf0;
-	margin: 0 10em;
+	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	padding: 10px 10px;
 	padding-bottom: 0;
+
+	// flex-direction: column;
 	span {
 		&:nth-child(1) {
 		}
@@ -21,8 +20,18 @@
 			color: #666769;
 			font-weight: 400;
 			font-size: 13px;
+
+			margin: 0.5em;
 		}
 		&:nth-child(3) {
 		}
+	}
+}
+
+@media only screen and (max-width: $medWidth) {
+	.footer-container {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 	}
 }

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 // style
 import "./contact.style.scss";
 
@@ -8,12 +8,27 @@ const Contact = () => {
 	const [email, setEmail] = useState("");
 	const [agreement, setAgreement] = useState(false);
 	const [message, setMessage] = useState("");
+	// const [winWidth, setWinWidth] = useState();
 
 	const submitBtn = useRef();
 
 	let a = 0;
+
+	// useEffect(() => {
+	// 	const changeBtnWidth = () => {
+	// 		setWinWidth(window.innerWidth);
+	// 		if (winWidth <= 630) {
+	// 			submitBtn.current.style.width = "20%";
+	// 		} else {
+	// 			submitBtn.current.style.width = "100%";
+	// 		}
+	// 		console.log(winWidth);
+	// 	};
+	// 	window.addEventListener("resize", changeBtnWidth);
+	// 	changeBtnWidth();
+	// 	return () => window.removeEventListener("resize", changeBtnWidth);
+	// }, [winWidth]);
 	const mouseOver = () => {
-		console.log(a);
 		if (
 			(firstName === "" ||
 				lastName === "" ||
@@ -22,6 +37,7 @@ const Contact = () => {
 				message === "") &&
 			a === 0
 		) {
+			// window.innerHeight <= 630 ? btnMoveLeft() :
 			btnMoveUp();
 			a = 1;
 			return false;
@@ -35,14 +51,24 @@ const Contact = () => {
 				message === "") &&
 			a === 1
 		) {
+			// window.innerHeight <= 630 ? btnMoveRight() :
 			btnMoveDown();
+
 			a = 0;
 			return false;
 		} else {
 			submitBtn.current.style.cursor = "pointer";
 		}
 	};
+	// const btnMoveRight = () => {
+	// 	submitBtn.current.style.transform = "translateX(0)";
+	// };
+	// const btnMoveLeft = () => {
+	// 	submitBtn.current.style.transform = "translateX(-150%)";
+	// };
 	const btnMoveUp = () => {
+		// console.log(submitBtn.current.classList.add("smallBtn"));
+		console.log(submitBtn.current.style.width);
 		submitBtn.current.style.transform = "translateY(120%)";
 	};
 	const btnMoveDown = () => {
